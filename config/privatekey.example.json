@@ -1,0 +1,14 @@
+// All the following parameters are provided when the service leve account is created from the Google cloud console.
+
+{
+  "type": "service_account",
+  "project_id": "my-custom-project-244001",
+  "private_key_id": "private-key-id-here",
+  "private_key": "-----BEGIN PRIVATE KEY-----priavte-key-here-----END PRIVATE KEY-----\n",
+  "client_email": "you-service-accounti@my-custom-project-244001.iam.gserviceaccount.com",
+  "client_id": "your-client-id-here",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "client-cert-url-here"
+}

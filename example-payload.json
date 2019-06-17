@@ -1,0 +1,19 @@
+{
+  "calendar_id": "lucascontre95@gmail.com",
+  "event": {
+    "id": "asd123123",
+    "summary": "CYPUT Anoux",
+    "location": "800 Howard St., San Francisco, CA 94103",
+    "description": "A chance to hear more about Google\"s developer products.",
+    "start": {
+      "dateTime": "2019-06-18T09:00:00-03:00",
+      "timeZone": "America/Argentina/Buenos_Aires"
+    },
+    "end": {
+      "dateTime": "2019-06-18T11:00:00-03:00",
+      "timeZone": "America/Argentina/Buenos_Aires"
+    },
+    "attendees": [ {"email": "ajadur@agro.uba.ar"} ]
+  }
+}
+

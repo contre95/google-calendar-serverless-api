@@ -1,0 +1,56 @@
+# Welcome to Serverless!
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+
+service: calendar-api # NOTE: update this with your service name
+app: calendar-api
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+plugins:
+  - serverless-offline
+stage: dev
+region: us-east-1
+
+# you can add packaging information here
+package:
+#  include:
+#    - include-me.js
+#      - include-me-dir/**
+  exclude:
+    - ./config/privatekey.json
+
+functions:
+  eventsHandler:
+    handler: api/controllers/events.handler
+    events:
+      - http:
+          path: event
+          method: get
+      - http:
+          path: event/{id}
+          method: get
+      - http:
+          path: event
+          method: post
+      - http:
+          path: event/{id}
+          method: put
+    environment:
+      CALENDAR_ID: lucascontre95@gmail.com
+      CLIENT_EMAIL: ${file(./config/privatekey.json):client_email}
+      PRIVATE_KEY: ${file(./config/privatekey.json):private_key}
+#      TYPE: ${file(./config/privatekey.json):type}
+#      PROJECT_ID: ${file(./config/privatekey.json):project_id}
+#      PRIVATE_KEY_ID: ${file(./config/privatekey.json):private_key_id}
+#      CLIENT_ID: ${file(./config/privatekey.json):client_id}
+#      AUTH_URI: ${file(./config/privatekey.json):auth_uri}
+#      TOKEN_URI: ${file(./config/privatekey.json):token_uri}
+#      AUTH_PROVIDER_X509_CERT_URL: ${file(./config/privatekey.json):auth_provider_x509_cert_url}
+#      CLIENT_X509_CERT_URL: ${file(./config/privatekey.json):client_x509_cert_url}
+
