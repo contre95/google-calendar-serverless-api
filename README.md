@@ -54,7 +54,7 @@ You can optionally add the `--verbose` flag to debug any errors if any.
 ## Usage
 #### Pourpose 
 This API is intended to let other scripts easily create and modify events for a given calendar created beforehand and specified in the configurations files before the deployment.
-Nevertheless, the calendar and be easily change by sending it as a parameter of the http request.
+Nevertheless, the calendar can be easily changed by sending it as a parameter of the http request.
 
 ##### POST and specific event:
 ```
