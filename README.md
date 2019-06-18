@@ -52,21 +52,21 @@ $ sls deploy
 ```
 You can optionally add the `--verbose` flag to debug any errors if any.
 ## Usage
-####Pourpose 
+#### Pourpose 
 This API is intended to let other scripts easily create and modify events for a given calendar created beforehand and specified in the configurations files before the deployment.
 Nevertheless, the calendar and be easily change by sending it as a parameter of the http request.
 
-####POST and specific event:
+##### POST and specific event:
 ```
 curl -X POST -H "Content-Type: application/json" -d @example-payload.json localhost:3000/event | jq
 ```
  
-####UPDATE an event:
+##### UPDATE an event:
 ```
 curl -X PUT -H "Content-Type: application/json" -d @example-payload.json localhost:3000/event/customid123123 | jq
 ```
 
-####GET the upcoming events:
+##### GET the upcoming events:
 ```
 curl -X GET 'http://localhost:3000/event?max_result=10' | jq
 ```
